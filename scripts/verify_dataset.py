@@ -16,7 +16,7 @@ Reference counts (full datasets, for comparison against what we actually have):
     Celeb-DF Celeb-synthesis                       5,639 videos
 
 Usage:
-    python verify_dataset.py --ffpp /path/to/FaceForensics++ --celebf /path/to.Celeb-DF-v2
+    python verify_dataset.py --ffpp /path.to/FaceForensics++ --celebdf /path.to/Celeb-DF-v2
 """
 
 import argparse
