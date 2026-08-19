@@ -18,3 +18,20 @@ Usage:
         --output ./extracted_faces --label 0 --method youtube --dataset ffpp
 """
 
+import argparse
+import csv
+from pathlib import Path
+
+import cv2
+import torch
+from facenet_pytorch import MTCNN
+from tqdm import tqdm
+
+def sample_frame_indices(total_frames: int, n: int):
+    if total_frames <= 0:
+        return []
+    if total_frames <= n:
+        return list(range(total_frames))
+    step = total_frames / n
+    return [int(i * step) for i in range(n)]
+
